@@ -1,4 +1,3 @@
-import {User} from "../models/user.model.js";
 import bcrypt from "bcryptjs";
 import {generateVerificationToken} from "../utils/generateVerificationToken.js";
 import {generateTokenAndSetCookie} from "../utils/generateTokenAndSetCookie.js";
