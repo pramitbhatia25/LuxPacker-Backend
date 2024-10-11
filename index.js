@@ -8,7 +8,6 @@ import razorpayRoutes from "./routes/razorpay.route.js"
 dotenv.config();
 
 const app = express();
-const PORT = process.env.PORT || 3000;
 
 // Enable CORS
 app.use(cors());
@@ -28,9 +27,5 @@ app.get('/a', (req, res) => {
 app.use("/v1", authRoutes);
 app.use("/v1/fetchData", dataRoutes);
 app.use("/v1/razorpay", razorpayRoutes);
-
-app.listen(PORT, () => {
-  console.log('Server is running on port ', PORT);
-});
 
 export default app;
