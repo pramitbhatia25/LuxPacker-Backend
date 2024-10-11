@@ -20,6 +20,11 @@ app.get('/', (req, res) => {
   res.send('Hello Worlasde1s2!');
 });
 
+app.get('/a', (req, res) => {
+  res.send('Hello a!');
+});
+
+
 app.use("/v1", authRoutes);
 app.use("/v1/fetchData", dataRoutes);
 app.use("/v1/razorpay", razorpayRoutes);
@@ -28,4 +33,4 @@ app.listen(PORT, () => {
   console.log('Server is running on port ', PORT);
 });
 
-module.exports =app;
+export default app;
